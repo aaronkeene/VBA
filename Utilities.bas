@@ -2,7 +2,7 @@ Option Explicit
 Option Private Module
 
 
-  Private Function FolderPathExists(folderPath As String) As Boolean
+Public Function FolderPathExists(folderPath As String) As Boolean
     ' Returns true if file/folder exists
     
     On Error GoTo errHandler
@@ -22,7 +22,7 @@ errHandler:
 End Function
 
 
-Private Function GetArrayValue(ByRef arr2D As Variant _
+Public Function GetArrayValue(ByRef arr2D As Variant _
                              , searchString As String _
                              , Optional ArrayColumnToSearch As Long = 0 _
                              , Optional ArrayColumnToReturn As Long = 1) As String
